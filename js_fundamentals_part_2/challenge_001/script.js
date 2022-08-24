@@ -23,12 +23,10 @@ GOOD LUCK 😀
 */
 
 // Team Names
-
 let team1 = "Dolphins";
 let team2 = "Koalas";
 
 // Function that calculates average score
-
 const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
 const scoreDolphins = calcAverage(44, 23, 71);
@@ -36,7 +34,6 @@ const scoreKoalas = calcAverage(65, 54, 49);
 console.log(scoreDolphins, scoreKoalas);
 
 // Function to check winner
-
 function checkWinner(avgDolphins, avgKoalas) {
     if (avgDolphins >= (2 * avgKoalas)) {
         console.log(`${team1} win (${avgDolphins} vs ${avgKoalas}).`);
