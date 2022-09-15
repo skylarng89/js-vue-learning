@@ -14,7 +14,7 @@
     <div id="ulc-wrapper">
       <header id="ulc-menu-bar">
         <div id="ulc-restart">
-          <button class="ulc-btn ulc-btn-text">Reset!</button>
+          <button class="ulc-btn ulc-btn-text reset">Reset!</button>
         </div>
         <div id="ulc-game-goal">
           <h4 id="ulc-goal-txt">Guess: 1 - 20</h4>
@@ -26,13 +26,13 @@
         </div>
         <div>
           <section id="ulc-guesses">
-            <p class="ulc-number">?</p>
+            <p class="ulc-number"></p>
           </section>
         </div>
         <div id="ulc-player-area">
           <section id="ulc-player-input">
-            <input type="number" name="ulc-num-input" id="ulc-num-input" min="1" max="2">
-            <button class="ulc-btn ulc-btn-text">Check!</button>
+            <input type="number" name="ulc-num-input" id="ulc-num-input" min="1" max="2" required aria-required="true">
+            <button class="ulc-btn ulc-btn-text check">Check!</button>
           </section>
           <section id="ulc-player-activity">
             <h3 id="ulc-play-msg">Start guessing...</h3>
@@ -48,6 +48,7 @@
         <a href="https://github.com/skylarng89" class="ulc-game-author">Patrick Aziken</a>
       </div>
     </footer>
+    <!-- <script src="script.js"></script> -->
   </body>
 
 </html>

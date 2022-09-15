@@ -81,7 +81,7 @@ html {
     justify-content: space-between;
     height: 90px;
     padding: 1rem 3rem;
-    margin: 0 0 7rem 0;
+    margin: 0 0 5rem 0;
 }
 
 button.ulc-btn {
@@ -173,6 +173,7 @@ footer {
     width: inherit;
     padding: 60px;
     background-color: var(--ulc-black);
+    margin-top: 3rem;
 }
 
 #copyright-area {
