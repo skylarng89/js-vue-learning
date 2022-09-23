@@ -4,7 +4,7 @@
 let cpuNum = Math.trunc(Math.random() * 30) + 1;
 
 // Store initial score
-let playerScore = 100;
+let playerScore = 20;
 const printScore = () =>
   (document.getElementsByClassName("ulc-player-score")[0].textContent =
     playerScore);
@@ -43,8 +43,8 @@ const normalBgColor = function () {
 };
 
 // Increment||Decrement player score on correct guess
-const addScore = () => (playerScore += 5);
-const subScore = () => (playerScore -= 5);
+const addScore = () => (playerScore++);
+const subScore = () => (playerScore--);
 
 // Disable/Enable Check button
 const disableCheckBtn = function () {
@@ -121,7 +121,7 @@ document
 // Reset game function
 document.querySelector(".reset").addEventListener("click", function () {
   // Reset player score
-  playerScore = 100;
+  playerScore = 20;
   highScore = 0;
   document.getElementsByClassName("ulc-player-score")[0].textContent =
     playerScore;
