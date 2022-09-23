@@ -131,4 +131,6 @@ document.querySelector(".reset").addEventListener("click", function () {
   document.getElementById("ulc-play-msg").textContent = "Start guessing...";
   // Reset player input field
   document.getElementById("ulc-num-input").value = "";
+  // Reset Check button
+  enableCheckBtn();
 });
