@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script async src="script.js"></script>
-    <title>The Numbers Game | By Patrick Aziken | @SkylarNG89</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script async src="script.js"></script>
+  <title>The Numbers Game | By Patrick Aziken | @SkylarNG89</title>
+</head>
 
-  <body>
-    <div id="ulc-wrapper">
-      <header id="ulc-menu-bar">
-        <div id="ulc-restart">
-          <button class="ulc-btn ulc-btn-text reset">Reset!</button>
-        </div>
-        <div id="ulc-game-goal">
-          <h4 id="ulc-goal-txt">Guess: 1 - 20</h4>
-        </div>
-      </header>
-      <main id="ulc-container">
-        <div>
-          <h1 id="ulc-game-title">Guess The Number</h1>
-        </div>
-        <div>
-          <section id="ulc-guesses">
-            <p class="ulc-number"></p>
-          </section>
-        </div>
-        <div id="ulc-player-area">
-          <section id="ulc-player-input">
-            <input type="number" name="ulc-num-input" id="ulc-num-input" min="1" max="2" required aria-required="true">
-            <button class="ulc-btn ulc-btn-text check">Check!</button>
-          </section>
-          <section id="ulc-player-activity">
-            <h3 id="ulc-play-msg">Start guessing...</h3>
-            <h3 class="ulc-label">Score: <span class="ulc-player-score"></span></h3>
-            <h3 class="ulc-label">High Score: <span class="ulc-player-highscore"></span></h3>
-          </section>
-        </div>
-      </main>
-    </div>
-    <footer>
-      <div id="copyright-area">
-        <span id="copyright-notice"></span>
-        <a href="https://github.com/skylarng89" class="ulc-game-author">Patrick Aziken</a>
+<body>
+  <div id="ulc-wrapper">
+    <header id="ulc-menu-bar">
+      <div id="ulc-restart">
+        <button class="ulc-btn ulc-btn-text reset">Reset!</button>
       </div>
-    </footer>
-    <!-- <script src="script.js"></script> -->
-  </body>
+      <div id="ulc-game-goal">
+        <h4 id="ulc-goal-txt">Guess: 1 - 30</h4>
+      </div>
+    </header>
+    <main id="ulc-container">
+      <div>
+        <h1 id="ulc-game-title">Guess The Number</h1>
+      </div>
+      <div>
+        <section id="ulc-guesses">
+          <p class="ulc-number">:)</p>
+        </section>
+      </div>
+      <div id="ulc-player-area">
+        <section id="ulc-player-input">
+          <input type="number" name="ulc-num-input" id="ulc-num-input" min="1" max="30" required aria-required="true">
+          <button class="ulc-btn ulc-btn-text check">Check!</button>
+        </section>
+        <section id="ulc-player-activity">
+          <h3 id="ulc-play-msg">Start guessing...</h3>
+          <h3 class="ulc-label">Score: <span class="ulc-player-score"></span></h3>
+          <h3 class="ulc-label">High Score: <span id="ulc-player-highscore"></span></h3>
+        </section>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <div id="copyright-area">
+      <span id="copyright-notice"></span>
+      <a href="https://github.com/skylarng89" target="_blank" class="ulc-game-author">Patrick Aziken</a>
+      <p>Audio Effects Courtesy: <a href="https://www.youtube.com/user/gamingsoundfx" target="_blank">Gaming Sound FX</a></p>
+    </div>
+  </footer>
+  <!-- <script src="script.js"></script> -->
+</body>
 
 </html>
