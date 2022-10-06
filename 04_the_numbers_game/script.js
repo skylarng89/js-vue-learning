@@ -19,17 +19,11 @@ let guessPlaceholder = (document.getElementsByClassName(
 )[0].textContent = "?");
 
 // Set messages
-const correctGuessMsg = () =>
-  (document.getElementById("ulc-play-msg").textContent = "Correct Guess!!! 🥳");
-const emptyNumMsg = () =>
-  (document.getElementById("ulc-play-msg").textContent = "No number! 😜");
-const lowNumMsg = () =>
-  (document.getElementById("ulc-play-msg").textContent = "Yikes!!! Too Low 🥴");
-const highNumMsg = () =>
-  (document.getElementById("ulc-play-msg").textContent =
-    "Yikes!!! Too High 😬");
-const gameOverMsg = () =>
-  (document.getElementById("ulc-play-msg").textContent = "Game over! ❌");
+const correctGuessMsg = () => (document.getElementById("ulc-play-msg").textContent = "Correct Guess!!! 🥳");
+const emptyNumMsg = () => (document.getElementById("ulc-play-msg").textContent = "No number! 😜");
+const lowNumMsg = () => (document.getElementById("ulc-play-msg").textContent = "Yikes!!! Too Low 🥴");
+const highNumMsg = () => (document.getElementById("ulc-play-msg").textContent = "Yikes!!! Too High 😬");
+const gameOverMsg = () => (document.getElementById("ulc-play-msg").textContent = "Game over! ❌");
 
 // Set game background colour on guess
 const correctGuessBg = function () {
