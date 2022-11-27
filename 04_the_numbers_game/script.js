@@ -1,5 +1,8 @@
 "use strict";
 
+const gameVersion = '1.0'
+console.log(`Version: ${gameVersion}`)
+
 // Store random number from 1 - 20 in cpu
 let cpuNum = Math.trunc(Math.random() * 30) + 1;
 
