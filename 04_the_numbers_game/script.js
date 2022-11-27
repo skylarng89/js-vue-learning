@@ -1,6 +1,6 @@
 "use strict";
 
-const gameVersion = '1.0'
+const gameVersion = '1.1'
 console.log(`Version: ${gameVersion}`)
 
 // Store random number from 1 - 20 in cpu
@@ -28,10 +28,10 @@ const lowNumMsg = () => (document.getElementById("ulc-play-msg").textContent = "
 const highNumMsg = () => (document.getElementById("ulc-play-msg").textContent = "Yikes!!! Too High 😬");
 const gameOverMsg = () => (document.getElementById("ulc-play-msg").textContent = "Game over! ❌");
 
-// Set game background colour on guess
+// Set game background colour on correct guess
 const correctGuessBg = function () {
   document.getElementsByTagName("body")[0].style.backgroundColor = "#20e7a7";
-  document.getElementsByTagName("body")[0].style.color = "#212121";
+  document.getElementsByTagName("body")[0].style.color = "#ffffff";
 };
 
 const normalBgColor = function () {
