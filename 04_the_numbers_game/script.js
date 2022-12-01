@@ -1,6 +1,6 @@
 "use strict";
 
-const gameVersion = '1.1'
+const gameVersion = '1.2'
 console.log(`Version: ${gameVersion}`)
 
 // Store random number from 1 - 20 in cpu
@@ -17,9 +17,7 @@ printScore();
 let highScore = 0;
 
 // Set guessed number placeholder
-let guessPlaceholder = (document.getElementsByClassName(
-  "ulc-number"
-)[0].textContent = "?");
+const guessPlaceholder = () => (document.getElementsByClassName("ulc-number")[0].textContent = "?");
 
 // Set messages
 const correctGuessMsg = () => (document.getElementById("ulc-play-msg").textContent = "Correct Guess!!! 🥳");
@@ -35,7 +33,7 @@ const correctGuessBg = function () {
 };
 
 const normalBgColor = function () {
-  document.getElementsByTagName("body")[0].style.backgroundColor = "#212121";
+  document.getElementsByTagName("body")[0].style.backgroundColor = "var(--black-l2)";
   document.getElementsByTagName("body")[0].style.color = "#ffffff";
 };
 
@@ -54,9 +52,9 @@ const disableCheckBtn = function () {
 const enableCheckBtn = function () {
   document.querySelectorAll("button.check")[0].disabled = false;
   document.querySelectorAll("button.check")[0].style.backgroundColor =
-    "var(--ulc-blue)";
+    "var(--blue)";
   document.querySelectorAll("button.check")[0].style.color =
-    "var(--ulc-white)";
+    "var(--white-l1)";
 }
 
 const correctSound = new Audio("./media/audio/correct.mp3");
@@ -94,9 +92,7 @@ document
     } else if (guessNum === cpuNum) {
       correctSound.play();
       disableCheckBtn();
-      guessPlaceholder = document.getElementsByClassName(
-        "ulc-number"
-      )[0].textContent = guessNum;
+      guessPlaceholder();
       addScore();
       printScore();
       correctGuessMsg();
@@ -123,7 +119,7 @@ document.querySelector(".reset").addEventListener("click", function () {
   document.getElementsByClassName("ulc-player-score")[0].textContent =
     playerScore;
   // Set guessed number placeholder
-  document.getElementsByClassName("ulc-number")[0].textContent = "?";
+  guessPlaceholder();
   // Reset game message
   document.getElementById("ulc-play-msg").textContent = "Start guessing...";
   // Reset player input field

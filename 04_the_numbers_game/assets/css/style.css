@@ -7,46 +7,53 @@
   --red: #ff3d24;
   --red-hover: #c4230e;
   --white-l1: #f5f5f5;
-  --black: #212121;
+  --black-l1: #212121;
+  --black-l2: #0f0f0f;
 }
 
-html,
-body {
-  height: 100%;
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: 'Press Start 2P', sans-serif;
 }
 
 body {
-  background: var(--black);
+  font-family: 'Press Start 2P', sans-serif;
   color: var(--white-l1);
+  background: var(--black-l2);
+  line-height: 1.7;
 }
 
-#ulc-wrapper {
+#ulc-wrapper, footer {
   display: flex;
   flex-direction: column;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 80%;
+  min-width: 320px;
+  max-width: 1240px;
 }
 
 #ulc-menu-bar {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0 1.5rem 1rem;
 }
 
-#ulc-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#ulc-restart,
+#ulc-game-goal {
+  margin: 1rem;
+}
+
+#ulc-game-goal {
+  width: 250px;
+  height: 50px;
+  background: var(--black-l1);
+  padding: 0.7rem;
   text-align: center;
-}
-
-#ulc-game-title {
-  line-height: 1.7;
 }
 
 .ulc-btn {
@@ -59,13 +66,25 @@ body {
   border-radius: 0;
 }
 
-#ulc-goal-txt {
-  font-size: 1em;
+#ulc-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
 }
 
-#ulc-restart,
-#ulc-game-goal {
-  margin: 0.5rem;
+#ulc-container div {
+  margin: 0 auto;
+}
+
+#ulc-game-title {
+  text-align: center;
+  line-height: 1.7;
+}
+
+#ulc-goal-txt {
+  font-size: 1em;
 }
 
 #ulc-guesses {
@@ -77,82 +96,67 @@ body {
   font-size: 3em;
   text-align: center;
   background: var(--white-l1);
-  color: var(--black);
-  margin: 1rem;
+  color: var(--black-l1);
+  margin: 1rem 1rem 3rem;
   padding: 0.3rem;
 }
 
 #ulc-player-area {
+  width: 100%;
   display: flex;
-  margin: 1rem auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 #ulc-player-input,
 #ulc-player-activity {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  margin: 3rem;
+  width: 49%;
+  height: 250px;
+  background: var(--black-l1);
+}
+
+#ulc-play-msg {
+  text-align: center;
+  color: #ffca2f;
 }
 
 input#ulc-num-input {
-  width: 100px;
-  height: 38px;
+  width: 160px;
+  height: 50px;
   background: transparent;
   border: 5px solid var(--white-l1);
   color: var(--white-l1);
   text-align: center;
 }
 
-#ulc-player-input,
-#ulc-player-activity {
-  width: 360px;
-  height: 140px;
-  padding: 1rem;
-  background: #141414;
-  font-size: 0.8em;
-}
-
-#ulc-player-activity {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+input#ulc-num-input::placeholder {
+  font-size: 0.6em;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  font-size: 1em;
+  width: 100%;
+  max-width: 1240px;
+  height: 70px;
+  font-size: 0.7em;
   text-align: center;
-  margin: 0 auto;
-}
-
-#copyright-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 1rem;
+  margin: 1rem auto;
 }
 
 /* Media Queries */
-/* 
+
 @media screen and (max-width: 1024px) {
   body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    font-size: 80%;
   }
-} */
 
-@media screen and (min-width: 815px) {
-  #ulc-player-area {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .ulc-btn.reset {
     width: 3rem;
     height: 3rem;
@@ -162,21 +166,58 @@ footer {
     color: transparent;
     padding: 0.5rem;
   }
+}
 
-  #ulc-player-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #ulc-player-activity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 768px) {
+  #ulc-wrapper {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 600px) {
+  #ulc-player-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: unset;
+    align-items: center;
+    justify-content: unset;
+    width: 100%;
+  }
+
+  #ulc-player-input,
+  #ulc-player-activity {
+    width: 100%;
+    margin: 0.5rem auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #ulc-game-title {
+    font-size: 120%;
+  }
+}
+
+/* @media screen and (min-width: 815px) {
+  #ulc-player-area {
+    justify-content: center;
+  }
+} */
+
+
+/* #ulc-player-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+/* #ulc-player-activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+
+/* @media screen and (max-width: 680px) {
   #copyright-area {
     display: flex;
     flex-direction: column;
@@ -184,28 +225,28 @@ footer {
     font-size: 0.7em;
     margin: 1rem;
   }
-}
+} */
 
 @media screen and (max-width: 500px) {
-  #ulc-menu-bar {
+  /* #ulc-menu-bar {
     display: flex;
     flex-direction: column;
-  }
+  } */
 
-  #ulc-container {
+  /* #ulc-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-  }
+  } */
 
-  #ulc-game-title {
+  /* #ulc-game-title {
     font-size: 1.3em;
     text-align: center;
     line-height: 1.8;
-  }
+  } */
 
-  #ulc-player-input,
+  /* #ulc-player-input,
   #ulc-player-activity {
     display: flex;
     flex-direction: column;
@@ -216,9 +257,9 @@ footer {
     padding: 1rem;
     background: #141414;
     font-size: 0.8em;
-  }
+  } */
 
-  #ulc-num-input {
+  /* #ulc-num-input {
     width: 100px;
     height: 70px;
     background: transparent;
@@ -226,23 +267,23 @@ footer {
     margin: 1.5rem auto 3rem;
     color: var(--white-l1);
     text-align: center;
-  }
+  } */
 
-  input#ulc-num-input {
+  /* input#ulc-num-input {
     margin: 1rem auto;
-  }
+  } */
 
-  .ulc-btn.check {
+  /* .ulc-btn.check {
     margin-bottom: 1rem;
-  }
+  } */
 
-  #ulc-player-activity h3 {
+  /* #ulc-player-activity h3 {
     font-size: 1rem;
-  }
+  } */
 }
 
 @media screen and (max-width: 255px) {
-  #ulc-goal-txt {
+  /* #ulc-goal-txt {
     white-space: nowrap;
-  }
+  } */
 }
