@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Intro to VueJS</title>
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -33,6 +28,9 @@
         <button @click="toggleBox2">Toggle Box</button>
         <div class="blueBox" v-if="isActive">B</div>
         <br>
+
+        <!-- Create login form using custom component -->
+        <login-form />
 
     </div>
     <script>
@@ -55,6 +53,39 @@
                 }
             }
         })
+
+        // Create custom component
+        vueApp.component('login-form', {
+            template: `
+                <form @submit.prevent="submitForm" >
+                    <h3 class="formTitle">{{title}}</h3>
+                    <label>{{username}}</label>
+                    <input type="username" v-model="usernameInput" />
+                    <label>{{password}}</label>
+                    <input type="password" v-model="passwordInput" />
+                    <button type="submit">Login</button>
+                    <p class="submitFormMsg"></p>
+                    <p class="userDetails"></p>
+                </form>
+            `,
+            data() {
+                return {
+                    title: 'Login',
+                    username: 'Username',
+                    password: 'Password',
+                    submitSuccessMsg: 'Login success',
+                    usernameInput: '',
+                    passwordInput: ''
+                }
+            },
+            methods: {
+                submitForm() {
+                    document.querySelector('.submitFormMsg').textContent = this.submitSuccessMsg;
+                    document.querySelector('.userDetails').innerText = `Username: ${this.usernameInput}\nPassword: ${this.passwordInput}`;
+                }
+            }
+        })
+
         vueApp.mount('#vueApp')
     </script>
 </body>
