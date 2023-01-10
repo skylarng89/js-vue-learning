@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>The Nike Store</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="logo-area">
+            <img src="./assets/images/nike_logo.png" alt="Nike" id="logo">
+        </div>
+
+        <!-- Product Section -->
+        <div class="prodSect">
+            <h1 id="prodName">{{ prodName }}</h1>
+            <p id="prodShortDesc">{{ prodShortDesc }}</p>
+        </div>
+
+
+    </div>
+
+    <!-- Import app.js -->
+    <script src="./assets/app.js"></script>
+
+    <!-- Mount Vue app -->
+    <script>
+        const app = vueApp.mount('#wrapper');
+    </script>
+</body>
+
+</html>
