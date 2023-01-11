@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/main.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Just Do It. - The Nike Super Store</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Header area -->
+        <header id="menu-bar">
+            <div id="logo-area">
+                <img src="./assets/images/nike_logo.png" alt="Nike" id="logo">
+            </div>
+
+            <div id="cart">
+                Cart: {{ cartTotal }}
+            </div>
+        </header>
+
+
+        <!-- Product Section -->
+        <section>
+            <div class="prod-wrapper">
+
+                <div id="prod-img">
+                    <img :src="prodMainImg" alt="" id="prod-main-img">
+                </div>
+
+                <div id="prod-summary">
+                    <h1 id="prod-name">{{ prodName }}</h1>
+                    <p id="prod-short-desc">{{ prodShortDesc }}</p>
+                    <a :href="prodSourceUrl" id="prod-source-url" target="_blank">Source
+                        URL</a>
+                    <div id="prod-stock-status">
+                        <p v-if="prodInventory >= 10" class="stock-status">In Stock</p>
+                        <p v-else-if="prodInventory >= 1 && prodInventory < 10" class="stock-status low-stock">Few units
+                            left</p>
+                        <p v-else class="stock-status out-of-stock">Out of Stock</p>
+                        <p v-if="onSale" id="sale-status">On Sale</p>
+                    </div>
+
+                    <div id="prod-attr">
+
+                        <h4 class="attr-title">Highlights</h4>
+                        <ul>
+                            <li v-for="highlight in prodHighlights"> {{ highlight }} </li>
+                        </ul>
+
+                        <h4 class="attr-title">Colours</h4>
+                        <p class="prod-notice">Hover items below to see image colours</p>
+                        <ul>
+                            <li v-for="color in prodVariants" :key="prodVariants.id"
+                                @mouseover="switchImg(color.prodImg)" :style="{ backgroundColor: color.colorBox }"
+                                class="prod-colors color-sel-box">
+                                {{
+                                color.colorBox
+                                }}
+                            </li>
+                        </ul>
+
+
+                        <h4 class="attr-title">Sizes</h4>
+                        <ul>
+                            <li v-for="size in prodSizes" :key="prodSizes.id" class="prod-sizes">
+                                {{size.prodSize}}
+                            </li>
+                        </ul>
+
+                        <p class="prod-notice">All sizes are in EU format</p>
+
+                    </div>
+
+                    <div id="prod-purchase">
+                        <button v-on:click="addToCart" id="addToCart">Add
+                            to cart</button>
+                        <button v-on:click="subFromCart" id="subFromCart">Remove from cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Import app.js -->
+    <script src="./assets/app.js"></script>
+
+    <!-- Mount Vue app -->
+    <script>
+        const app = vueApp.mount('#wrapper');
+    </script>
+</body>
+
+</html>
