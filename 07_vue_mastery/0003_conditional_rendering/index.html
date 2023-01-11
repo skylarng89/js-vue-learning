@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/x-icon">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>The Nike Store</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Site branding -->
+        <div id="logo-area">
+            <img src="./assets/images/nike_logo.png" alt="Nike" id="logo">
+        </div>
+
+        <!-- Product Section -->
+        <section>
+            <div class="prod-wrapper">
+
+                <div id="prod-img">
+                    <img :src="prodMainImg" alt="" id="prod-main-img">
+                </div>
+
+                <div id="prod-summary">
+                    <h1 id="prod-name">{{ prodName }}</h1>
+                    <p id="prod-short-desc">{{ prodShortDesc }}</p>
+                    <a :href="prodSourceUrl" id="prod-source-url" target="_blank" tooltip="Open in new tab">Source
+                        URL</a>
+                    <div id="prod-stock-status">
+                        <p v-if="prodInventory >= 10" class="stock-status">In Stock</p>
+                        <p v-else-if="prodInventory > 1 && prodInventory < 10" class="stock-status low-stock">Few units
+                            left</p>
+                        <p v-else class="stock-status">Out of Stock</p>
+                        <p v-if="onSale" id="sale-status">On Sale</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Import app.js -->
+    <script src="./assets/app.js"></script>
+
+    <!-- Mount Vue app -->
+    <script>
+        const app = vueApp.mount('#wrapper');
+    </script>
+</body>
+
+</html>
