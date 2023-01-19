@@ -1,4 +1,4 @@
-////////////////////////////////////
+/// /////////////////////////////////
 // Coding Challenge #2
 
 /*
@@ -12,48 +12,43 @@ HINT: Use an if/else statement 😉
 GOOD LUCK 😀
 */
 
-
-//Store user details
-let firstUser = 'Mark';
-let secondUser = 'John';
+// Store user details
+const firstUser = 'Mark'
+const secondUser = 'John'
 
 // Test data one
-let markMass1 = 78;
-let markHeight1 = 1.69;
+const markMass1 = 78
+const markHeight1 = 1.69
 
-let johnMass1 = 92;
-let johnHeight1 = 1.95;
-
+const johnMass1 = 92
+const johnHeight1 = 1.95
 
 // Calculate BMI
-const markBMI1 = markMass1 / markHeight1 ** 2;
-console.log(markBMI1);
-const johnBMI1 = johnMass1 / johnHeight1 ** 2;
-console.log(johnBMI1);
+const markBMI1 = markMass1 / markHeight1 ** 2
+console.log(markBMI1)
+const johnBMI1 = johnMass1 / johnHeight1 ** 2
+console.log(johnBMI1)
 
-//Check if Mark has higher BMI
-const markHigherBMI1 = markBMI1 > johnBMI1;
-console.log(markHigherBMI1);
-
+// Check if Mark has higher BMI
+const markHigherBMI1 = markBMI1 > johnBMI1
+console.log(markHigherBMI1)
 
 // Test data two
-let markMass2 = 95;
-let markHeight2 = 1.88;
+const markMass2 = 95
+const markHeight2 = 1.88
 
-let johnMass2 = 85;
-let johnHeight2 = 1.66;
-
+const johnMass2 = 85
+const johnHeight2 = 1.66
 
 // Calculate BMI
-const markBMI2 = markMass2 / markHeight2 ** 2;
-console.log(markBMI2);
-const johnBMI2 = johnMass2 / johnHeight2 ** 2;
-console.log(johnBMI2);
-
+const markBMI2 = markMass2 / markHeight2 ** 2
+console.log(markBMI2)
+const johnBMI2 = johnMass2 / johnHeight2 ** 2
+console.log(johnBMI2)
 
 // Using template literals and if-else statement
 if (markBMI1 > johnBMI1) {
-    console.log(`Mark's BMI (${markBMI1}) is higher than John's (${johnBMI1})`);
+  console.log(`Mark's BMI (${markBMI1}) is higher than John's (${johnBMI1})`)
 } else {
-    console.log(`Mark's BMI (${markBMI2}) is lower than John's (${johnBMI2})`);
+  console.log(`Mark's BMI (${markBMI2}) is lower than John's (${johnBMI2})`)
 }

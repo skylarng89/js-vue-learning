@@ -1,5 +1,5 @@
 'use strict'
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #3
 
 /*
@@ -16,28 +16,28 @@ GOOD LUCK 😀
 
 // Mark Miller object
 const person1 = {
-    fullname: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
+  fullname: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
 
-    // Calculate BMI
-    calcBMI: function () {
-        this.bmi = this.mass / (this.height ** 2);
-        return Math.round(this.bmi);
-    }
+  // Calculate BMI
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height ** 2)
+    return Math.round(this.bmi)
+  }
 }
 
 // John Smith object
 const person2 = {
-    fullname: 'John Smith',
-    mass: 400,
-    height: 1.95,
+  fullname: 'John Smith',
+  mass: 400,
+  height: 1.95,
 
-    // Calculate BMI
-    calcBMI: function () {
-        this.bmi = this.mass / (this.height ** 2);
-        return Math.round(this.bmi);
-    }
+  // Calculate BMI
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height ** 2)
+    return Math.round(this.bmi)
+  }
 }
 
-console.log(person1.calcBMI(this.bmi) > person2.calcBMI(this.bmi) ? `${person1.fullname}'s BMI (${person1.calcBMI(this.bmi)}) is higher than ${person2.fullname}'s (${person2.calcBMI(this.bmi)})!` : `${person2.fullname}'s BMI (${person2.calcBMI(this.bmi)}) is higher than ${person1.fullname}'s (${person1.calcBMI(this.bmi)})!`);
+console.log(person1.calcBMI(this.bmi) > person2.calcBMI(this.bmi) ? `${person1.fullname}'s BMI (${person1.calcBMI(this.bmi)}) is higher than ${person2.fullname}'s (${person2.calcBMI(this.bmi)})!` : `${person2.fullname}'s BMI (${person2.calcBMI(this.bmi)}) is higher than ${person1.fullname}'s (${person1.calcBMI(this.bmi)})!`)

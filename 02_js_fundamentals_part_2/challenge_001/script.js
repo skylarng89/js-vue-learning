@@ -1,5 +1,5 @@
 'use strict'
-///////////////////////////////////////
+/// ////////////////////////////////////
 // Coding Challenge #1
 
 /*
@@ -23,25 +23,25 @@ GOOD LUCK 😀
 */
 
 // Team Names
-let team1 = "Dolphins";
-let team2 = "Koalas";
+const team1 = 'Dolphins'
+const team2 = 'Koalas'
 
 // Function that calculates average score
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3
 
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
-console.log(scoreDolphins, scoreKoalas);
+const scoreDolphins = calcAverage(44, 23, 71)
+const scoreKoalas = calcAverage(65, 54, 49)
+console.log(scoreDolphins, scoreKoalas)
 
 // Function to check winner
-function checkWinner(avgDolphins, avgKoalas) {
-    if (avgDolphins >= (2 * avgKoalas)) {
-        console.log(`${team1} win (${avgDolphins} vs ${avgKoalas}).`);
-    } else if (avgKoalas >= (2 * avgDolphins)) {
-        console.log(`${team2} win (${avgKoalas} vs ${avgDolphins}).`);
-    } else {
-        console.log("It's a Draw or No Winner!");
-    }
+function checkWinner (avgDolphins, avgKoalas) {
+  if (avgDolphins >= (2 * avgKoalas)) {
+    console.log(`${team1} win (${avgDolphins} vs ${avgKoalas}).`)
+  } else if (avgKoalas >= (2 * avgDolphins)) {
+    console.log(`${team2} win (${avgKoalas} vs ${avgDolphins}).`)
+  } else {
+    console.log("It's a Draw or No Winner!")
+  }
 }
 
-checkWinner(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas)

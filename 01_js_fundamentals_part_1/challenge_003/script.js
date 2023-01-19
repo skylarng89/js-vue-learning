@@ -1,4 +1,4 @@
-////////////////////////////////////
+/// /////////////////////////////////
 // Coding Challenge #3
 
 /*
@@ -17,34 +17,34 @@ TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK 😀
 */
 
-const firstTeam = "Dolphins";
-const secondTeam = "Koalas";
+const firstTeam = 'Dolphins'
+const secondTeam = 'Koalas'
 
 // Using Test Data
 // Dolphins average score
-const dolphinsRoundOne = 96;
-const dolphinsRoundTwo = 108;
-const dolphinsRoundThree = 89;
+const dolphinsRoundOne = 96
+const dolphinsRoundTwo = 108
+const dolphinsRoundThree = 89
 
-const dolphinsAverageScore = (dolphinsRoundOne + dolphinsRoundTwo + dolphinsRoundThree) / 3;
-console.log(`${firstTeam}'s average score = ${dolphinsAverageScore}`);
+const dolphinsAverageScore = (dolphinsRoundOne + dolphinsRoundTwo + dolphinsRoundThree) / 3
+console.log(`${firstTeam}'s average score = ${dolphinsAverageScore}`)
 
 // Koalas average score
-const koalasRoundOne = 88;
-const koalasRoundTwo = 91;
-const koalasRoundThree = 110;
+const koalasRoundOne = 88
+const koalasRoundTwo = 91
+const koalasRoundThree = 110
 
-const koalasAverageScore = (koalasRoundOne + koalasRoundTwo + koalasRoundThree) / 3;
-console.log(`${secondTeam}'s average score = ${koalasAverageScore}`);
+const koalasAverageScore = (koalasRoundOne + koalasRoundTwo + koalasRoundThree) / 3
+console.log(`${secondTeam}'s average score = ${koalasAverageScore}`)
 
-const minScore = 100;
+const minScore = 100
 
 if (dolphinsAverageScore < minScore && koalasAverageScore < minScore) {
-    console.log("No winner. Minimum score not met!");
+  console.log('No winner. Minimum score not met!')
 } else if (dolphinsAverageScore > koalasAverageScore && dolphinsAverageScore >= minScore) {
-    console.log(`The ${firstTeam} win the game!`);
+  console.log(`The ${firstTeam} win the game!`)
 } else if (dolphinsAverageScore < koalasAverageScore && koalasAverageScore >= minScore) {
-    console.log(`The ${secondTeam} win the game!`);
+  console.log(`The ${secondTeam} win the game!`)
 } else {
-    console.log("It's a draw!");
+  console.log("It's a draw!")
 }

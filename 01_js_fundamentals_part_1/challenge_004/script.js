@@ -1,4 +1,4 @@
-////////////////////////////////////
+/// /////////////////////////////////
 // Coding Challenge #4
 
 /*
@@ -16,14 +16,14 @@ GOOD LUCK 😀
 */
 
 // Set tip percentage variables
-const tipPercent1 = 15;
-const tipPercent2 = 20;
+const tipPercent1 = 15
+const tipPercent2 = 20
 
 // Get customer bill
-let customerBill = 275;
+const customerBill = 275
 
 // Calculate tip
-customerBill >= 50 && customerBill <= 300 ? tip = (tipPercent1 / 100) * customerBill : tip = (tipPercent2 / 100) * customerBill;
-totalBill = customerBill + tip;
+customerBill >= 50 && customerBill <= 300 ? tip = (tipPercent1 / 100) * customerBill : tip = (tipPercent2 / 100) * customerBill
+totalBill = customerBill + tip
 
-console.log(`The bill was ${customerBill}, the tip was ${tip} and the total value was ${totalBill}`);
+console.log(`The bill was ${customerBill}, the tip was ${tip} and the total value was ${totalBill}`)
